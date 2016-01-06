@@ -1,0 +1,38 @@
+﻿@model IEnumerable<tx_backstage_view.Models.Document>
+
+<div class="view left">
+    <ul>
+        <li><h4><a class="active" href="#"><img src="~/img/computer.png" />My Cloud Folder</a></h4></li>
+    </ul>
+</div>
+
+<div class="view right">
+
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                <a onclick="LoadFromController('@item.Name')" class="right" href="#">
+                    <img src="~/img/doc.png" /><strong>@item.Name</strong>
+                    <p>...
+
+                        @{
+                            if (Path.GetDirectoryName(item.FilePath).Length > 50)
+                            {
+                                @Path.GetDirectoryName(item.FilePath).Substring(Path.GetDirectoryName(item.FilePath).Length - 50);
+                            }
+                            else
+                            {
+                                @Path.GetDirectoryName(item.FilePath);
+                            }
+                        }
+
+                    </p>
+                        </a>
+                    </li>
+        }
+    </ul>
+
+</div>
+
+

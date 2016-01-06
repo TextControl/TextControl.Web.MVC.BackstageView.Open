@@ -1,0 +1,104 @@
+﻿@using TXTextControl.Web
+@using TXTextControl.Web.MVC
+
+@Html.TXTextControl().TextControl(settings =>
+{
+    settings.Dock = DockStyle.Window;
+    settings.DocumentFileDirectory = Server.MapPath("/App_Data/documents");
+}).Render()
+
+<div id="backstage" class="backstage">
+    <div class="menu">
+        <a onclick="animateBackstage(1)" href="#"><img src="~/img/back.png" /></a>
+        <ul id="menu">
+            <li><a id="New" onclick="newDocument()" href="#">New</a></li>
+            <li><a id="Open" onclick="switchBackstageView('Open')" href="#">Open</a></li>
+            <li><a id="View3" onclick="switchBackstageView('View3')" href="#">View 3</a></li>
+            <li><a id="View4" onclick="switchBackstageView('View4')" href="#">View 3</a></li>
+        </ul>
+    </div>
+    <div id="title" class="title"></div>
+    <div id="stage" class="stage"></div>
+</div>
+
+<script>
+    
+    TXTextControl.addEventListener("ribbonTabsLoaded", function (e) {
+        // remove the original file menu
+        $("#fileMenu").remove();
+
+        // open the new menu when the FILE menu is clicked
+        $("#tabFile").on("click", function () {
+            animateBackstage(0);
+        });
+
+        animateBackstage(1);
+    });
+
+    window.addEventListener("resize", resizeBackstage);
+
+    // adapt the backstage size when the window is resized
+    function resizeBackstage() {
+        if($("#backstage").css("opacity") == "0") {
+            $("#backstage").css("left", "-" + $("#backstage").css("width"));
+        }
+    }
+
+    // fade in and out the backstage menu
+    function animateBackstage(direction) {
+        if (direction == 1) {
+            $("#backstage").css("opacity", "0").css("left", "-" + $("#backstage").css("width"));
+            switchBackstageView("Open");
+        }
+        else {
+            $("#backstage").css("opacity", "1").css("left", "0");
+            switchBackstageView("Open");
+        }
+    }
+
+    // switch the backstage view
+    function switchBackstageView(view) {
+        $('#menu li a').each(function () {
+            $(this).removeClass("active");
+        });
+
+        // add the title
+        $("#title").html("<h1>" + view  + "</h1>");
+        $("#" + view).addClass("active");
+
+        // load the partial view dynamically
+        $("#stage").load("/home/getview", { viewName: view });
+    }
+
+    function newDocument() {
+        TXTextControl.resetContents();
+        animateBackstage(1);
+    }
+
+    // load the document from the controller and load
+    // it into the TXTextControl.Web
+    function LoadFromController(DocumentName) {
+        var serviceURL = "/Home/LoadTemplate";
+
+        $.ajax({
+            type: "POST",
+            url: serviceURL,
+            contentType: 'application/json',
+            data: JSON.stringify({
+                DocumentName: DocumentName
+            }),
+            success: successFunc,
+            error: errorFunc
+        });
+
+        function successFunc(data, status) {
+            TXTextControl.loadDocument(TXTextControl.streamType.InternalUnicodeFormat, data);
+            animateBackstage(1);
+        }
+
+        function errorFunc() {
+            alert('File could not be loaded');
+        }
+
+    }
+</script>
