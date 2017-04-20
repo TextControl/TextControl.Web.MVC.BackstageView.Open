@@ -2,10 +2,22 @@
 
 <div class="ribbon-group" id="ribbonGroupClipboard">
 	<div class="ribbon-group-content">
+		<!-- "Paste Source" toggle button -->
+		<div id="localClipBrdTglBtnContainer" style="display: inline-block; float: left; border-right: 1px solid #bbbbbb; margin-right: 5px">
+			<div class="ribbon-button ribbon-button-big ribbon-button-selected" id="tglBtnLocalClipboard">
+				<div class="ribbon-button-big-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/clientpaste.png">
+				</div>
+				<div class="ribbon-button-big-label-container">
+					<p class="ribbon-button-label"><!-- Local<br />Clipboard --></p>
+				</div>
+			</div>
+		</div>
+
 		<!-- Paste button -->
-		<div class="ribbon-button ribbon-button-big" id="drpDnBtnPaste">
+		<div class="ribbon-button ribbon-button-big" id="btnPaste">
 			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/paste.png" class="ribbon-button-big-image">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/paste.png">
 			</div>
 			<div class="ribbon-button-big-label-container">
 				<p class="ribbon-button-label">
@@ -19,7 +31,7 @@
 			<!-- Cut button -->
 			<div class="ribbon-button ribbon-button-small" id="btnCut">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/cut.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/cut.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Cut --></p>
@@ -29,7 +41,7 @@
 			<!-- Copy button -->
 			<div class="ribbon-button ribbon-button-small" id="btnCopy">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/copy.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/copy.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Copy --></p>
@@ -55,52 +67,48 @@
 			</div>
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="btnFontGrow">
-					<img src="/TXTextControl.Web/Icons/small_32bit/fontsizeincrease.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontsizeincrease.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="btnFontShrink">
-					<img src="/TXTextControl.Web/Icons/small_32bit/fontsizedecrease.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontsizedecrease.png">
 				</div>
 			</div>
 		</div>
 		<div class="ribbon-group-content-row">
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnBold">
-					<img src="/TXTextControl.Web/Icons/small_32bit/fontbold.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontbold.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnItalic">
-					<img src="/TXTextControl.Web/Icons/small_32bit/fontitalic.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontitalic.png">
 				</div>
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnUnderlineStyles">
-					<img src="/TXTextControl.Web/Icons/small_32bit/fontunderline.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontunderline.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnStrikethrough">
-					<img src="/TXTextControl.Web/Icons/small_32bit/strikethrough.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/strikethrough.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnSubscript">
-					<img src="/TXTextControl.Web/Icons/small_32bit/subscript.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/subscript.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnSuperscript">
-					<img src="/TXTextControl.Web/Icons/small_32bit/superscript.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/superscript.png">
 				</div>
 			</div>
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="btnHighlightColor">
-					<img src="/TXTextControl.Web/Icons/small_32bit/highlightcolor.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/highlightcolor.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="btnFontColor">
-					<img src="/TXTextControl.Web/Icons/small_32bit/fontcolor.png">
-				</div>
-			</div>
-			<div class="ribbon-group-button-group">
-				<div class="ribbon-button ribbon-button-tiny" id="btnCharacterSettings">
-					<img src="/TXTextControl.Web/Icons/small_32bit/charactersettings.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontcolor.png">
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="ribbon-group-label-container">
-		<p class="ribbon-group-label"><!-- Font --></p>
+		<p class="ribbon-group-label"><!-- Font --></p>		
 	</div>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="txDialogLauncher" id="btnDlgLnchFontGrp" width="16" height="16" style="opacity: 0" data-orig-src="Icons/small_32bit/dialoglauncher.svg">
 </div>
 
 <!-- Paragraph group -->
@@ -111,45 +119,45 @@
 			<!-- List buttons -->
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnBulletList">
-					<img src="/TXTextControl.Web/Icons/small_32bit/listbullet.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/listbullet.png">
 				</div>
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnNumberedList">
-					<img src="/TXTextControl.Web/Icons/small_32bit/listdialog.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/listdialog.png">
 				</div>
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnStructuredList">
-					<img src="/TXTextControl.Web/Icons/small_32bit/liststructured.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/liststructured.png">
 				</div>
 			</div>
 
 			<!-- Indent increase / decrease -->
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="btnIndentDecrease">
-					<img src="/TXTextControl.Web/Icons/small_32bit/indentdecrease.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/indentdecrease.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="btnIndentIncrease">
-					<img src="/TXTextControl.Web/Icons/small_32bit/indentincrease.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/indentincrease.png">
 				</div>
 			</div>
 
 			<!-- Text direction rtl / ltr -->
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnTextDirLTR">
-					<img src="/TXTextControl.Web/Icons/small_32bit/textdirltr.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/textdirltr.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnTextDirRTL">
-					<img src="/TXTextControl.Web/Icons/small_32bit/textdirrtl.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/textdirrtl.png">
 				</div>
 			</div>
 
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="btnTabs">
-					<img src="/TXTextControl.Web/Icons/small_32bit/tabs.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/tabs.png">
 				</div>
 			</div>
 
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnControlChars">
-					<img src="/TXTextControl.Web/Icons/small_32bit/paragraphsign.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/paragraphsign.png">
 				</div>
 			</div>
 		</div>
@@ -157,34 +165,37 @@
 			<!-- Paragraph alignment -->
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnAlignLeft">
-					<img src="/TXTextControl.Web/Icons/small_32bit/alignleft.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/alignleft.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnAlignCenter">
-					<img src="/TXTextControl.Web/Icons/small_32bit/aligncenter.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/aligncenter.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnAlignRight">
-					<img src="/TXTextControl.Web/Icons/small_32bit/alignright.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/alignright.png">
 				</div>
 				<div class="ribbon-button ribbon-button-tiny" id="tglBtnAlignJust">
-					<img src="/TXTextControl.Web/Icons/small_32bit/alignjustify.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/alignjustify.png">
 				</div>
 			</div>
 
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnLineSpacing">
-					<img src="/TXTextControl.Web/Icons/small_32bit/linespacing.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/linespacing.png">
 				</div>
 			</div>
 
 			<div class="ribbon-group-button-group">
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnBorders">
-					<img src="/TXTextControl.Web/Icons/small_32bit/borderbox.png">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderbox.png">
 				</div>
-			</div>
-
-			<div class="ribbon-group-button-group">
-				<div class="ribbon-button ribbon-button-tiny" id="btnParSettings">
-					<img src="/TXTextControl.Web/Icons/small_32bit/paragraphsettings.png">
+				<div class="ribbon-button ribbon-button-tiny" id="btnParBackColor">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/paragraphbackcolor.png">
+				</div>
+				<div class="ribbon-button ribbon-button-tiny" id="btnFrameLineColor">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/tablelinecolor.png">
+				</div>
+				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnFrameLineWidth">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/tablelinewidth.png">
 				</div>
 			</div>
 		</div>
@@ -192,6 +203,7 @@
 	<div class="ribbon-group-label-container">
 		<p class="ribbon-group-label"><!-- Paragraph --></p>
 	</div>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="txDialogLauncher" id="btnDlgLnchParGrp" width="16" height="16" style="opacity: 0" data-orig-src="Icons/small_32bit/dialoglauncher.svg">
 </div>
 
 <!-- Styles group -->
@@ -200,7 +212,7 @@
 	<div class="ribbon-group-content">
 		<div class="ribbon-button ribbon-button-big" id="drpDnBtnStyles">
 			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/styledialog.png" class="ribbon-button-big-image">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/styledialog.png">
 			</div>
 			<div class="ribbon-button-big-label-container">
 				<p class="ribbon-button-label">
@@ -224,7 +236,7 @@
 			<!-- Undo button -->
 			<div class="ribbon-button ribbon-button-small" id="btnUndo">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/undo.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/undo.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Undo --></p>
@@ -234,7 +246,7 @@
 			<!-- Redo button -->
 			<div class="ribbon-button ribbon-button-small" id="btnRedo">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/redo.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/redo.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Redo --></p>
@@ -245,7 +257,7 @@
 			<!-- Find button -->
 			<div class="ribbon-button ribbon-button-small" id="btnFind">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/find.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/find.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Find --></p>
@@ -255,7 +267,7 @@
 			<!-- Replace button -->
 			<div class="ribbon-button ribbon-button-small" id="btnReplace">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/replace.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/replace.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Replace --></p>
@@ -265,7 +277,7 @@
 			<!-- Select All button -->
 			<div class="ribbon-button ribbon-button-small" id="btnSelectAll">
 				<div class="ribbon-button-small-image-container">
-					<img src="/TXTextControl.Web/Icons/small_32bit/selectall.png" class="ribbon-button-small-image">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/selectall.png">
 				</div>
 				<div class="ribbon-button-small-label-container">
 					<p class="ribbon-button-label"><!-- Select All --></p>
@@ -284,10 +296,10 @@
 <!-- Paste dropdown menu -->
 <ul id="pasteDropDown" class="dropDownMenu">
 	<!-- Server Paste -->
-	<li id="mnuItemServerPaste" class="ui-state-disabled">
-		<a href="#!">
+	<li id="mnuItemServerPaste" class="txui-state-disabled">
+		<a>
 			<div class="large-menu-item-image-container-long-caption">
-				<img src="/TXTextControl.Web/Icons/large_32bit/paste.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/paste.png">
 			</div>
 			<div class="large-menu-item-long-caption-container">
 				<h1><!-- Server Paste --></h1>
@@ -297,9 +309,9 @@
 	</li>
 	<!-- Client Paste -->
 	<li id="mnuItemClientPaste">
-		<a href="#!">
+		<a>
 			<div class="large-menu-item-image-container-long-caption">
-				<img src="/TXTextControl.Web/Icons/large_32bit/clientpaste.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/clientpaste.png">
 			</div>
 			<div class="large-menu-item-long-caption-container">
 				<h1><!-- Client Paste --></h1>
@@ -311,40 +323,40 @@
 
 <!-- Underline styles dropdown menu -->
 <ul id="ulStylesDropDown" class="dropDownMenu">
-	<li id="mnuItmULStyleSingle">
-		<a href="#!">
+	<li id="mnuItemULStyleSingle">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleSingle">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Single --></p>
 			</div>
 		</a>
 	</li>
-	<li id="mnuItmULStyleDoubled">
-		<a href="#!">
+	<li id="mnuItemULStyleDoubled">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleDoubled">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Doubled --></p>
 			</div>
 		</a>
 	</li>
-	<li id="mnuItmULStyleSingleWO">
-		<a href="#!">
+	<li id="mnuItemULStyleSingleWO">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleSingleWO">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Single, only words --></p>
 			</div>
 		</a>
 	</li>
-	<li id="mnuItmULStyleDoubledWO">
-		<a href="#!">
+	<li id="mnuItemULStyleDoubledWO">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleDoubledWO">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Doubled, only words --></p>
@@ -356,9 +368,9 @@
 <!-- Borders dropdown menu -->
 <ul id="bordersDropDown" class="dropDownMenu">
 	<li id="mnuItemBorderLeft">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderLeft">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderleft.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderleft.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Left --></p>
@@ -366,9 +378,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderTop">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderTop">
-				<img src="/TXTextControl.Web/Icons/small_32bit/bordertop.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/bordertop.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Top --></p>
@@ -376,9 +388,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderRight">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderRight">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderright.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderright.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Right --></p>
@@ -386,9 +398,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderBottom">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderBottom">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderbottom.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderbottom.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Bottom --></p>
@@ -396,9 +408,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderOutside">
-		<a href="#!" style="border-top: 1px solid lightgray">
+		<a style="border-top: 1px solid lightgray">
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderOutside">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderbox.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderbox.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Outside Borders --></p>
@@ -406,9 +418,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderAll">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderAll">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderall.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderall.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- All Borders --></p>
@@ -416,9 +428,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderInsideHor">
-		<a href="#!" style="border-top: 1px solid lightgray">
+		<a style="border-top: 1px solid lightgray">
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderInsideHor">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderinnerhor.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderinnerhor.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Inside horizontal Border --></p>
@@ -426,9 +438,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBorderInsideVert">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny" id="tglBtnBorderInsideVert">
-				<img src="/TXTextControl.Web/Icons/small_32bit/borderinnervert.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderinnervert.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Inside vertical Border --></p>
@@ -440,9 +452,9 @@
 <!-- Bulleted list dropdown menu -->
 <ul id="bulletListDropDown" class="dropDownMenu">
 	<li id="mnuItemBulletListDisc">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-42px" id="tglBtnBulletListDisc">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listdisc.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listdisc.png">
 			</div>
 			<div class="menu-item-caption-container-42px">
 				<p><!-- Disc --></p>
@@ -450,9 +462,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBulletListDash">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-42px" id="tglBtnBulletListDash">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listdash.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listdash.png">
 			</div>
 			<div class="menu-item-caption-container-42px">
 				<p><!-- Dash --></p>
@@ -460,9 +472,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBulletListAsterisk">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-42px" id="tglBtnBulletListAsterisk">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listasterisk.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listasterisk.png">
 			</div>
 			<div class="menu-item-caption-container-42px">
 				<p><!-- Asterisk --></p>
@@ -470,9 +482,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBulletListDiamond">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-42px" id="tglBtnBulletListDiamond">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listdiamond.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listdiamond.png">
 			</div>
 			<div class="menu-item-caption-container-42px">
 				<p><!-- Diamond --></p>
@@ -480,9 +492,9 @@
 		</a>
 	</li>
 	<li id="mnuItemBulletListArrow">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-42px" id="tglBtnBulletListArrow">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listarrow.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listarrow.png">
 			</div>
 			<div class="menu-item-caption-container-42px">
 				<p><!-- Arrow --></p>
@@ -490,9 +502,9 @@
 		</a>
 	</li>
 	<li id="mnuItemListFormatBullet">
-		<a href="#!" style="border-top: 1px solid lightgray">
+		<a style="border-top: 1px solid lightgray">
 			<div style="float: left; height: 16px; width: 16px; padding: 3px">
-				<img src="/TXTextControl.Web/Icons/small_32bit/listbullet.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/listbullet.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Format List… --></p>
@@ -504,9 +516,9 @@
 <!-- Numbered list dropdown menu -->
 <ul id="numberedListDropDown" class="dropDownMenu">
 	<li id="mnuItemNumberedList_123">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnNumberedList_123">
-				<img src="/TXTextControl.Web/Icons/large_32bit/list123.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/list123.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- 1, 2, 3, … --></p>
@@ -514,9 +526,9 @@
 		</a>
 	</li>
 	<li id="mnuItemNumberedList_abc">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnNumberedList_abc">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listabc.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listabc.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- a, b, c, … --></p>
@@ -524,9 +536,9 @@
 		</a>
 	</li>
 	<li id="mnuItemNumberedList_ABC">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnNumberedList_ABC">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listabccapital.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listabccapital.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- A, B, C, … --></p>
@@ -534,9 +546,9 @@
 		</a>
 	</li>
 	<li id="mnuItemNumberedList_III">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnNumberedList_III">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listromancapital.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listromancapital.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- I, II, III, … --></p>
@@ -544,9 +556,9 @@
 		</a>
 	</li>
 	<li id="mnuItemNumberedList_iii">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnNumberedList_iii">
-				<img src="/TXTextControl.Web/Icons/large_32bit/listroman.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/listroman.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- i, ii, iii, … --></p>
@@ -554,9 +566,9 @@
 		</a>
 	</li>
 	<li id="mnuItemFormatListNumbered">
-		<a href="#!" style="border-top: 1px solid lightgray">
+		<a style="border-top: 1px solid lightgray">
 			<div style="float: left; height: 16px; width: 16px; padding: 3px">
-				<img src="/TXTextControl.Web/Icons/small_32bit/listdialog.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/listdialog.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Format List… --></p>
@@ -568,9 +580,9 @@
 <!-- Structured list dropdown menu -->
 <ul id="structuredListDropDown" class="dropDownMenu">
 	<li id="mnuItemStructuredList_123">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnStructuredList_123">
-				<img src="/TXTextControl.Web/Icons/large_32bit/liststruct123.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/liststruct123.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- 1, 2, 3, … --></p>
@@ -578,9 +590,9 @@
 		</a>
 	</li>
 	<li id="mnuItemStructuredList_abc">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnStructuredList_abc">
-				<img src="/TXTextControl.Web/Icons/large_32bit/liststructabc.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/liststructabc.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- a, b, c, … --></p>
@@ -588,9 +600,9 @@
 		</a>
 	</li>
 	<li id="mnuItemStructuredList_ABC">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnStructuredList_ABC">
-				<img src="/TXTextControl.Web/Icons/large_32bit/liststructabccapital.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/liststructabccapital.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- A, B, C, … --></p>
@@ -598,9 +610,9 @@
 		</a>
 	</li>
 	<li id="mnuItemStructuredList_III">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnStructuredList_III">
-				<img src="/TXTextControl.Web/Icons/large_32bit/liststructromancapital.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/liststructromancapital.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- I, II, III, … --></p>
@@ -608,9 +620,9 @@
 		</a>
 	</li>
 	<li id="mnuItemStructuredList_iii">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-numbered-list" id="tglBtnStructuredList_iii">
-				<img src="/TXTextControl.Web/Icons/large_32bit/liststructroman.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/liststructroman.png">
 			</div>
 			<div class="menu-item-caption-container-numbered-list">
 				<p><!-- i, ii, iii, … --></p>
@@ -618,9 +630,9 @@
 		</a>
 	</li>
 	<li id="mnuItemFormatListStructured">
-		<a href="#!" style="border-top: 1px solid lightgray">
+		<a style="border-top: 1px solid lightgray">
 			<div style="float: left; height: 16px; width: 16px; padding: 3px">
-				<img src="/TXTextControl.Web/Icons/small_32bit/liststructured.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/liststructured.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- Format List… --></p>
@@ -632,9 +644,9 @@
 <!-- Line spacing dropdown menu -->
 <ul id="lineSpacingDropDown" class="dropDownMenu">
 	<li id="mnuItemLineSpacing_1_0">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnLineSpacing_1_0">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 1.0 --></p>
@@ -642,9 +654,9 @@
 		</a>
 	</li>
 	<li id="mnuItemLineSpacing_1_15">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnLineSpacing_1_15">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 1.15 --></p>
@@ -652,9 +664,9 @@
 		</a>
 	</li>
 	<li id="mnuItemLineSpacing_1_5">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnLineSpacing_1_5">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 1.5 --></p>
@@ -662,9 +674,9 @@
 		</a>
 	</li>
 	<li id="mnuItemLineSpacing_2_0">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnLineSpacing_2_0">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 2.0 --></p>
@@ -672,9 +684,9 @@
 		</a>
 	</li>
 	<li id="mnuItemLineSpacing_2_5">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnLineSpacing_2_5">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 2.5 --></p>
@@ -682,12 +694,106 @@
 		</a>
 	</li>
 	<li id="mnuItemLineSpacing_3_0">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnLineSpacing_3_0">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 3.0 --></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<!-- Frame Line width dropdown menu -->
+<ul id="frameLineWidthDropDown" class="dropDownMenu">
+	<li id="mnuItemFrameLineWidth_0_25">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_0_25">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight025.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.25 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_0_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_0_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight050.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_0_75">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_0_75">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight075.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.75 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_1_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_1_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight100.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 1.0 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_1_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_1_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight150.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 1.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_2_25">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_2_25">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight225.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 2.25 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_3_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_3_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight300.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 3.0 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_4_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_4_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight450.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 4.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_6_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_6_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight600.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 6.0 --></p>
 			</div>
 		</a>
 	</li>
@@ -698,9 +804,9 @@
 	<!-- Formatting style names are added and removed in js -->
 	<!-- "Manage Styles" menu item -->
 	<li id="mnuItemManageStyles">
-		<a href="#!" style="border-top: 1px solid lightgray; overflow-x: hidden">
+		<a style="border-top: 1px solid lightgray; overflow-x: hidden">
 			<div class="large-menu-item-image-container-long-caption">
-				<img src="/TXTextControl.Web/Icons/large_32bit/styledialog.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/styledialog.png">
 			</div>
 			<div class="large-menu-item-long-caption-container">
 				<h1><!-- Manage Styles --></h1>

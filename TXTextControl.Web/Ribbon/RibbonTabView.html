@@ -5,7 +5,7 @@
 		<!-- Zoom button -->
 		<div class="ribbon-button ribbon-button-big" id="drpDnBtnZoom">
 			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/zoom.png" class="ribbon-button-big-image">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/zoom.png">
 			</div>
 			<div class="ribbon-button-big-label-container">
 				<p class="ribbon-button-label">
@@ -19,33 +19,45 @@
 
 		<div class="ribbon-button ribbon-button-big" id="btnZoom100">
 			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/zoom100.png" class="ribbon-button-big-image">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/zoom100.png">
 			</div>
 			<div class="ribbon-button-big-label-container">
 				<p class="ribbon-button-label"><!-- 100% --></p>
 			</div>
 		</div>
 
-		<!-- Page Width button -->
+		<div class="ribbon-button-wrapper-small-stacked-buttons">
 
-		<div class="ribbon-button ribbon-button-big" id="btnZoomPageWidth">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/zoompagewidth.png" class="ribbon-button-big-image">
+			<!-- Full Page -->
+			<div class="ribbon-button ribbon-button-small" id="btnZoomFullPage">
+				<div class="ribbon-button-small-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/zoomfullpage.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Full Page --></p>
+				</div>
 			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Page Width --></p>
-			</div>
-		</div>
 
-		<!-- Page Height button -->
+			<!-- Page Width button -->
+			<div class="ribbon-button ribbon-button-small" id="btnZoomPageWidth">
+				<div class="ribbon-button-small-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/zoompagewidth.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Page Width --></p>
+				</div>
+			</div>
 
-		<div class="ribbon-button ribbon-button-big" id="btnZoomPageHeight">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/zoompageheight.png" class="ribbon-button-big-image">
+			<!-- Text Width -->
+			<div class="ribbon-button ribbon-button-small" id="btnZoomTextWidth">
+				<div class="ribbon-button-small-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/zoomtotext.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Text Width --></p>
+				</div>
 			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Page Height --></p>
-			</div>
+
 		</div>
 	</div>
 
@@ -55,9 +67,9 @@
 	</div>
 </div>
 
-<!-- "Show" group -->
+<!-- "Toolbars" group -->
 
-<div class="ribbon-group" id="ribbonGroupShow">
+<div class="ribbon-group" id="ribbonGroupToolbars">
 	<div class="ribbon-group-content">
 		<!-- Ruler bar check boxes -->
 		<div class="ribbon-button-wrapper-small-stacked-buttons">
@@ -103,69 +115,64 @@
 	</div>
 </div>
 
-<!-- "Proofing" group -->
+<!-- "Show" group -->
 
-<div class="ribbon-group" id="ribbonGroupProofing">
+<div class="ribbon-group" id="ribbonGroupShow">
 	<div class="ribbon-group-content">
-		<!-- "Spelling" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="btnSpelling" style="display: none">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/spelling.png" class="ribbon-button-big-image">
+		<div class="ribbon-button-wrapper-small-stacked-buttons">
+			<!-- Table Gridlines -->
+			<div class="ribbon-button ribbon-button-small ribbon-stacked-toggle-button" id="btnViewTableGridlines">
+				<div class="ribbon-button ribbon-button-tiny" id="tglBtnViewTableGridlines">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/tablegridlines.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Table Gridlines --></p>
+				</div>
 			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Spelling --></p>
+			<!-- Bookmark Markers -->
+			<div class="ribbon-button ribbon-button-small ribbon-stacked-toggle-button" id="btnViewBookmarkMarkers">
+				<div class="ribbon-button ribbon-button-tiny" id="tglBtnViewBookmarkMarkers">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/bookmarkmarkers.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Bookmark Markers --></p>
+				</div>
 			</div>
-		</div>
-		<!-- "Enable spell check" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="tglBtnEnableSpellCheck" style="display: none">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/spellasyoutype.png" class="ribbon-button-big-image">
-			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Enable Spell<br />Checking --></p>
-			</div>
-		</div>
-		<!-- "Enable Language Detection" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="tglBtnEnableLangDetect" style="display: none">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/languagedetection.png" class="ribbon-button-big-image">
-			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Enable Language<br />Detection --></p>
-			</div>
-		</div>
-		<!-- "Load Dictionary" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="btnLoadDictionary" style="display: none">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/loaddictionary.png" class="ribbon-button-big-image">
-			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Load<br />Dictionary --></p>
+			<!-- Textframe Marker Lines -->
+			<div class="ribbon-button ribbon-button-small ribbon-stacked-toggle-button" id="btnViewTextframeMarkerLines">
+				<div class="ribbon-button ribbon-button-tiny" id="tglBtnViewTextframeMarkerLines">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/textframemarkerlines.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Textframe Marker Lines --></p>
+				</div>
 			</div>
 		</div>
-		<!-- "Enable Hyphenation" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="tglBtnEnableHyphenation" style="display: none">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/hyphenation.png" class="ribbon-button-big-image">
+		<div class="ribbon-button-wrapper-small-stacked-buttons">
+			<!-- Drawing Marker Lines -->
+			<div class="ribbon-button ribbon-button-small ribbon-stacked-toggle-button" id="btnViewDrawingMarkerLines">
+				<div class="ribbon-button ribbon-button-tiny" id="tglBtnViewDrawingMarkerLines">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/drawingmarkerlines.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Drawing Marker Lines --></p>
+				</div>
 			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Enable<br />Hyphenation --></p>
-			</div>
-		</div>
-		<!-- "Set Language" button -->
-		<div class="ribbon-button ribbon-button-big" id="btnSetLanguage">
-			<div class="ribbon-button-big-image-container">
-				<img src="/TXTextControl.Web/Icons/large_32bit/setlanguage.png" class="ribbon-button-big-image">
-			</div>
-			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Set<br />Language --></p>
+			<!-- Control Characters -->
+			<div class="ribbon-button ribbon-button-small ribbon-stacked-toggle-button" id="btnViewControlCharacters">
+				<div class="ribbon-button ribbon-button-tiny" id="tglBtnViewControlCharacters">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/paragraphsign.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label"><!-- Control Characters --></p>
+				</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Ribbon group label -->
 	<div class="ribbon-group-label-container">
-		<p class="ribbon-group-label"><!-- Proofing --></p>
+		<p class="ribbon-group-label"><!-- Show --></p>
 	</div>
 </div>
 
@@ -176,9 +183,9 @@
 
 <ul id="zoomDropDown" class="dropDownMenu">
 	<li id="mnuItemZoom_25">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnZoom_25">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>25%</p>
@@ -186,9 +193,9 @@
 		</a>
 	</li>
 	<li id="mnuItemZoom_50">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnZoom_50">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>50%</p>
@@ -196,9 +203,9 @@
 		</a>
 	</li>
 	<li id="mnuItemZoom_75">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnZoom_75">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>75%</p>
@@ -206,9 +213,9 @@
 		</a>
 	</li>
 	<li id="mnuItemZoom_100">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark ribbon-button-selected" id="tglBtnZoom_100">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>100%</p>
@@ -216,9 +223,9 @@
 		</a>
 	</li>
 	<li id="mnuItemZoom_150">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnZoom_150">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>150%</p>
@@ -226,9 +233,9 @@
 		</a>
 	</li>
 	<li id="mnuItemZoom_200">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnZoom_200">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>200%</p>
@@ -236,9 +243,9 @@
 		</a>
 	</li>
 	<li id="mnuItemZoom_400">
-		<a href="#!">
+		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnZoom_400">
-				<img src="/TXTextControl.Web/Icons/small_32bit/checkmark.png">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p>400%</p>
