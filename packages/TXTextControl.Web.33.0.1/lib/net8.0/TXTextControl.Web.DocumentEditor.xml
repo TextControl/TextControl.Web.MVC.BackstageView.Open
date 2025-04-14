@@ -1,0 +1,2487 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TXTextControl.Web.DocumentEditor</name>
+    </assembly>
+    <members>
+        <member name="T:TXTextControl.Web.MVC.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.Properties.Resources.EXC_JSON_NOT_ENUMERABLE">
+            <summary>
+              Looks up a localized string similar to The given JSON string does not contain an array of objects..
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.Properties.Resources.EXC_SERVER_NOT_READY">
+            <summary>
+              Looks up a localized string similar to Server not ready..
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.ControlBase">
+            <summary>
+            Serves as a base class for TXTextControl ASP.NET MVC extensions.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.ControlBase.GetHTML">
+            <summary>
+            Generates the HTML code rendered by an extension into the required page output.
+            </summary>
+            <returns>The HTML code rendered by an extension into the required page output.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.ControlBase.Render">
+            <summary>
+            Inserts the HTML code rendered by an extension into the required page output.
+            </summary>
+            <returns>The HTML code rendered by an extension into the required page output.</returns>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.ControlsFactory">
+            <summary>
+            Contains helper methods to create TXTextControl MVC extensions.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.ControlsFactory.TextControl(System.Action{TXTextControl.Web.MVC.TextControlSettings})">
+            <summary>
+            Creates a TextControl.
+            </summary>
+            <param name="method">A delegate method to set the TextControl settings.</param>
+            <returns>A TextControl.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.ControlsFactory.TextControl(TXTextControl.Web.MVC.TextControlSettings)">
+            <summary>
+            Creates a TextControl.
+            </summary>
+            <param name="settings">The TextControl settings.</param>
+            <returns>A TextControl.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.ControlsFactory.TextControl">
+            <summary>
+            Creates a TextControl.
+            </summary>
+            <returns>A TextControl.</returns>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.HtmlHelperExtension">
+            <summary>
+            Extends the standard System.Web.Mvc.HtmlHelper class with a TX Text Control specific extension
+            method.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.HtmlHelperExtension.TXTextControl(Microsoft.AspNetCore.Mvc.Rendering.IHtmlHelper)">
+            <summary>
+            Provides access to helper methods allowing you to render individual TX Text Control ASP.NET MVC
+            extensions. For now only one extension is implemented (see class TextControl).
+            </summary>
+            <param name="helper">The HtmlHelper instance that this method extends.</param>
+            <returns>A ControlsFactory instance.</returns>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.TextControl">
+            <summary>
+            Class TextControl
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.#ctor(System.Action{TXTextControl.Web.MVC.TextControlSettings})">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.#ctor(TXTextControl.Web.MVC.TextControlSettings)">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadText(System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified file.
+            </summary>
+            <param name="path">Specifies a file from which the data is loaded.</param>
+            <param name="streamType">Specifies one of the StreamType values.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadText(System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified file stream.
+            </summary>
+            <param name="fileStream">Specifies a file from which the data is loaded. The data is loaded from the stream's current position.</param>
+            <param name="streamType">Specifies one of the StreamType values.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadText(System.Byte[],TXTextControl.Web.BinaryStreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified byte array.
+            </summary>
+            <param name="binaryData">Specifies a byte array from which the data is loaded.</param>
+            <param name="binaryStreamType">Specifies one of the BinaryStreamType values.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadText(System.String,TXTextControl.Web.StringStreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified string.
+            </summary>
+            <param name="stringData">Specifies a string from which the data is loaded.</param>
+            <param name="stringStreamType">Specifies one of the StringStreamType values.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadXMLDatabase(System.String)">
+            <summary>
+            Loads a database from an XML file.
+            </summary>
+            <param name="fileName">The full file path.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadXMLDatabase(System.Xml.XmlDocument)">
+            <summary>
+            Loads a database from an XML document.
+            </summary>
+            <param name="xmlDocument">An XML document containing data tables and the database scheme.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadDataSet(System.Data.DataSet)">
+            <summary>
+            Loads a data set.
+            </summary>
+            <param name="dataSet">The data set containing data tables and data relations.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadXMLDatabase(System.IO.FileStream)">
+            <summary>
+            Loads an XML database from a file stream.
+            </summary>
+            <param name="fileStream">A file stream containing an XML file.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadDataFromModel(System.Collections.IEnumerable)">
+            <summary>
+            Interprets an enumerable collection of objects as a merge data source.
+            </summary>
+            <param name="model">A collection of objects of an arbitrary type. Must implement interface IEnumerable.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadDataFromModel(System.Collections.IEnumerable,System.IFormatProvider)">
+            <summary>
+            Interprets an enumerable collection of objects as a merge data source.
+            </summary>
+            <param name="model">A collection of objects of an arbitrary type. Must implement interface IEnumerable.</param>
+            <param name="numberAndDateTimeFormat">Number and date / time value format.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.LoadDataFromJson(System.String)">
+            <summary>
+            Uses data given as a JSON string as a data source.
+            </summary>
+            <param name="json">The JSON string.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.SetFileDirectory(System.String,TXTextControl.Web.FileType)">
+            <summary>
+            Determines the directory path where the files of a specific file type are stored.
+            </summary>
+            <param name="directory">Specifies the directory path where the files of a specific file type are stored.</param>
+            <param name="type">Specifies one of the FileType values.</param>
+            <returns>A TextControl object.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.GetHTML">
+            <summary>
+            Generates an HTML string representing the control. Generates the HTML code rendered into the
+            required page output.
+            </summary>
+            <returns>An HTML string representing the control.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.GenerateHTML(System.String@)">
+            <summary>
+            Prepares the contents of the HTML skeleton.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.AddContainerDIV(System.Text.StringBuilder)">
+            <summary>
+            Surrounds the control with another div to position it.
+            </summary>
+            <param name="sb">The StringBuilder object containing the HTML code.</param>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.GetStringResourceByName(System.String)">
+            <summary>
+            Returns string resource content from namespace "TXTextControl.Web.MVC" by resource name.
+            </summary>
+            <param name="resourceName">The name of the resource.</param>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.GetStringResourceByName(System.String,System.String@)">
+            <summary>
+            Returns string resource content from namespace "TXTextControl.Web.MVC" by resource name.
+            </summary>
+            <param name="resourceName">The name of the resource.</param>
+            <param name="strContentType">The content type of the resource.</param>
+            <returns>The content of the resource.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.TryParseUnit(TXTextControl.Web.MVC.Unit@,System.String)">
+            <summary>
+            Tries and parses a value to an instance of class "Unit".
+            </summary>
+            <param name="result">The parsed value.</param>
+            <param name="text">The value to parse.</param>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.WriteSettings(System.String@)">
+            <summary>
+            Replaces the placeholder string "__SETTINGS__" with the actual editor settings.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.InjectScript(System.String@)">
+            <summary>
+            Replaces "__SCRIPT__" placeholder string with the actual initializer script.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.WaitForTXComponents">
+            <summary>
+            Waits for TX Text Control components becoming available for a given amount of time.
+            </summary>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControl.SetFileDirectories(TXTextControl.Web.MVC.TextControlSettings)">
+            <summary>
+            Informs WebSocketHandler about file directories (if set).
+            </summary>
+            <param name="settings"></param>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControl.IsReady">
+            <summary>
+            Returns whether the Text Control components in the Text Control serivce's worker process are completely.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControl.WSHandler">
+            <summary>
+            Returns the WebSocketHandler instance handling the control's WebSocket connection.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.TextControlSettings">
+            <summary>
+            TextControl settings. Is used to parameterize instances of class TextControl.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControlSettings.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControlSettings.#ctor(TXTextControl.Web.MVC.TextControlSettings)">
+            <summary>
+            Copy constructor.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.Width">
+            <summary>
+            Gets or sets the width of the control.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.Height">
+            <summary>
+            Gets or sets the height of the control.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.APIRoute">
+            <summary>
+            Gets or sets the API route to the websocket and print handlers (i. e. the part of the path 
+            between the hostname and the handlers). The default value is "api/".
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.DocumentTargetMarkers">
+            <summary>
+            Specifies or returns a value indicating if markers for hypertext targets are shown in the editor.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.Dock">
+            <summary>
+            Gets or sets how the control is docked to its container or web site. This property takes
+            precedence over the width and height properties.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.DocumentFileDirectory">
+            <summary>
+            Determines the directory path where document files are stored.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.DatabaseFileDirectory">
+            <summary>
+            Determines the directory path where database files are stored.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.ImageFileDirectory">
+            <summary>
+            Determines the directory path where image files are stored.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.BackColor">
+            <summary>
+            Determines the background color of the main text area and the ruler bars.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.StatusBarColor">
+            <summary>
+            Determines the background color of the main text area and the ruler bars.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.EditMode">
+            <summary>
+            Determines whether the document's text is read-only, can be selected or is editable.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.ContextMenusEnabled">
+            <summary>
+            Determines whether a right click opens a context menu or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.SaveDocumentQuestionDialogEnabled">
+            <summary>
+            Determines whether a confirmation dialog should be shown before discarding unsaved changes.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.TableGridLines">
+            <summary>
+            Determines whether table grid lines are shown in the editor or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.TextFrameMarkerLines">
+            <summary>
+            Specifies whether text frames that have no border line are shown with marker lines.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.ControlChars">
+            <summary>
+            Specifies whether control characters are visible or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.TextFieldsEditable">
+            <summary>
+            Specifies whether text fields are editable or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.FormattingPrinter">
+            <summary>
+            Sets the name of a printer the text dimensions and capabilities of which are used
+            to format the document.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.Culture">
+            <summary>
+            Gets or sets the control's culture. Affects date and time string formats, for example.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.UICulture">
+            <summary>
+            Gets or sets the control's user interface culture. Affects the string resource language.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.UserNames">
+            <summary>
+            Gets or sets a list of names specifying users who have access to editable regions. When a document
+            is set to read-only all editable regions that are related to these users can be edited. 
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.ReconnectTimeout">
+            <summary>
+            Reconnection timeout in seconds.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.WebSocketURL">
+            <summary>
+            Websocket URL. Setting this to a value other than null or the empty string completely overrides
+            the internal default websocket url determination process.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.RenderMode">
+            <summary>
+            Component render mode (Bitmap, vector based or automatically selected). Is "Bitmap" by default.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.MVC.TextControlSettings.IsApiRouteSet">
+            <summary>
+            Just returns whether the APIRoute property has been set to a value explicitly.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.TextControlSettings.GetValues(System.String)">
+            <summary>
+            Makes a dynamic object from an instance of this class with some preprocessing of values
+            for conversion to JSON.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.StringBuilderExtension">
+            <summary>
+            StringBuilder extension methods
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.StringBuilderExtension.AppendCSSProperty(System.Text.StringBuilder,System.String,System.String)">
+            <summary>
+            Appends a CSS property to a StringBuilder.
+            </summary>
+            <param name="sb">The StringBuilder to append to.</param>
+            <param name="name">The name of the CSS property.</param>
+            <param name="value">The value of the CSS property.</param>
+        </member>
+        <member name="T:TXTextControl.Web.MVC.StringExtension">
+            <summary>
+            StringValues extension methods
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MVC.StringExtension.ToContentType(System.String)">
+            <summary>
+            Returns the content type of a resource by its name.
+            </summary>
+            <param name="strResourceName">The name of the resource.</param>
+        </member>
+        <member name="T:TXTextControl.Web.WebSocketMiddleware">
+            <summary>
+            Middleware to handle WebSocket requests.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Creates a new instance of the WebSocketMiddleware class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.String)">
+            <summary>
+            Creates a new instance of the WebSocketMiddleware class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="webSocketPath">The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.Net.IPAddress,System.Int32)">
+            <summary>
+            Creates a new instance of the WebSocketMiddleware class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="serviceAddress">The IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.String,System.Int32)">
+            <summary>
+            Creates a new instance of the WebSocketMiddleware class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="hostNameOrAddress">The host name or IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.Net.IPAddress,System.Int32,System.String)">
+            <summary>
+            Creates a new instance of the WebSocketMiddleware class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="serviceAddress">The IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="webSocketPath">The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,System.String,System.Int32,System.String)">
+            <summary>
+            Creates a new instance of the WebSocketMiddleware class.
+            </summary>
+            <param name="next">The next middleware in the pipeline.</param>
+            <param name="hostNameOrAddress">The host name or IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="webSocketPath">The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.</param>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketMiddleware.ServiceAddress">
+            <summary>
+            The IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketMiddleware.ServicePort">
+            <summary>
+            The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketMiddleware.WebSocketPath">
+            <summary>
+            The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Invokes the middleware.
+            </summary>
+            <param name="context">The HTTP context.</param>
+            <returns>A task that represents the asynchronous operation.</returns>
+        </member>
+        <member name="T:TXTextControl.Web.WebSocketMiddleWareExtensions">
+            <summary>
+            Extension methods for the WebSocketMiddleware class.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleWareExtensions.UseTXWebSocketMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Adds the Text Control document editor WebSocketMiddleware to the pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder instance.</param>
+            <returns>The IApplicationBuilder instance.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleWareExtensions.UseTXWebSocketMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)">
+            <summary>
+            Adds the Text Control document editor WebSocketMiddleware to the pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder instance.</param>
+            <param name="webSocketPath">The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.</param>
+            <returns>The IApplicationBuilder instance.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleWareExtensions.UseTXWebSocketMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Net.IPAddress,System.Int32)">
+            <summary>
+            Adds the Text Control document editor WebSocketMiddleware to the pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder instance.</param>
+            <param name="serviceAddress">The IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <returns>The IApplicationBuilder instance.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleWareExtensions.UseTXWebSocketMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String,System.Int32)">
+            <summary>
+            Adds the Text Control document editor WebSocketMiddleware to the pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder instance.</param>
+            <param name="hostNameOrAddress">The host name or IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <returns>The IApplicationBuilder instance.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleWareExtensions.UseTXWebSocketMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.Net.IPAddress,System.Int32,System.String)">
+            <summary>
+            Adds the Text Control document editor WebSocketMiddleware to the pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder instance.</param>
+            <param name="serviceAddress">The IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="webSocketPath">The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.</param>
+            <returns>The IApplicationBuilder instance.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketMiddleWareExtensions.UseTXWebSocketMiddleware(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String,System.Int32,System.String)">
+            <summary>
+            Adds the Text Control document editor WebSocketMiddleware to the pipeline.
+            </summary>
+            <param name="builder">The IApplicationBuilder instance.</param>
+            <param name="hostNameOrAddress">The host name or IP address of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="servicePort">The port of the TX Text Control HTML5 document editor synchronization service to which a connection is to be made.</param>
+            <param name="webSocketPath">The path of the WebSocketHandler. Default is "/txwebsocket". This string is used as a part of the URL
+            to determine whether the request is for the TX Text Control WebSocketHandler. Case-insensitive.</param>
+            <returns>The IApplicationBuilder instance.</returns>
+        </member>
+        <member name="T:TXTextControl.Web.Json.Extensions">
+            <summary>
+            Contains helper methods for various reflection tasks. (e. g. JSON serialization
+            or object based data source generation)
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.GetUnderlyingType(System.Type,System.Boolean@)">
+            <summary>
+            Returns the underlying type of the given type t if t is a nullable type, t otherwise.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.GetUnderlyingType(System.Type)">
+            <summary>
+            Returns the underlying type of the given type t if t is a nullable type, t otherwise.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsSimpleType(System.Type)">
+            <summary>
+            Checks if a type is one of the built-in .NET data types.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsNumericType(System.Type)">
+            <summary>
+            Checks if a type is numeric.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsIntegralType(System.Type)">
+            <summary>
+            Checks if a type is an integral numeric type.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.TryConvertToDecimal(System.Object,System.Decimal@)">
+            <summary>
+            Trys to convert an object to a numerical value.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.GetPublicOrInternalGettableProps(System.Type)">
+            <summary>
+            Returns all non static public and internal properties of a type having a public or internal getter method.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.GetPublicOrInternalSettableProps(System.Type)">
+            <summary>
+            Returns all non static public and internal properties of a type having a public or internal setter method.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsEnumerableType(System.Type)">
+            <summary>
+            Checks if a given type implements interface IEnumerable.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsGenericEnumerableType(System.Type)">
+            <summary>
+            Checks if a given type implements interface IEnumerable&lt;&gt;
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsCorrectDictType(System.Type)">
+            <summary>
+            Checks if a given type is a generic dictionary with string keys.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.CreateInstanceOrGetDefault(System.Type)">
+            <summary>
+            Creates and returns an instance of type t if the type has a parameterless constructor or
+            is a value type. Returns null otherwise.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.IsControlChar(System.Char)">
+            <summary>
+            Checks if a character lies inside the ascii control character range.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Extensions.ToUnixTimestamp(System.DateTime)">
+            <summary>
+            Converts from a local DateTime to Unix time in seconds
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Json.JsonConvert">
+            <summary>
+            A JSON parser. Objects are parsed to Dictionaries with keys of type 
+            "string" and values of type "object". Numerical values are parsed to long, int 
+            or double.
+            The implementation follows the official JSON specification ECMA-404.
+            (see http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonConvert.DeserializeObject(System.String)">
+            <summary>
+            Parses a JSON string. Parses objects to Dictionaries with string keys and values 
+            of type "object" and numerical values to long, int or double.
+            </summary>
+            <param name="json">The JSON string to parse.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonConvert.Deserialize``1(System.String)">
+            <summary>
+            Parses a JSON string to an object of the given type.
+            </summary>
+            <param name="json">The JSON string to parse.</param>
+            <typeparam name="T">The type of the object to generate.</typeparam>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonConvert.DeserializeArray(System.String)">
+            <summary>
+            Parses a JSON string to an array.
+            </summary>
+            <param name="json">The JSON string to parse.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonConvert.DeserializeArray``1(System.String)">
+            <summary>
+            Parses a JSON string to an array of objects of the given type.
+            </summary>
+            <typeparam name="T">The type of the array elements.</typeparam>
+            <param name="json">The JSON string to parse.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonConvert.Serialize(System.Object)">
+            <summary>
+            Recursively serializes the given object to JSON notation.
+            </summary>
+            <param name="obj">The object to serialize.</param>
+            <returns>The object serialized to JSON notation.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonConvert.ConvertToType``1(System.Object)">
+            <summary>
+            Converts the given object to the specified type.
+            </summary>
+            <typeparam name="T">The type to which obj will be converted.</typeparam>
+            <param name="obj">The object to convert.</param>
+            <returns>The object that has been converted to the target type.</returns>		
+        </member>
+        <member name="T:TXTextControl.Web.Json.JsonParser">
+            <summary>
+            Internal JSON parser class. Recursively parses objects to Dictionaries with string keys and values 
+            of type "object" and all numbers to long, int or double.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Json.JsonParser.State">
+            <summary>
+            The possible parser states.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.#ctor(System.String)">
+            <summary>
+            Creates a parser which parses a given JSON string.
+            </summary>
+            <param name="json">The JSON string to parse.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a parser which parses a given JSON string.
+            </summary>
+            <param name="json">The JSON string to parse.</param>
+            <param name="start">The 0-based character index in the 
+            given string to start parsing at.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.Parse``1">
+            <summary>
+            Tries to parse a JSON string and recursively generate an object of a requested type. 
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ParseArray``1">
+            <summary>
+            Tries to parse a JSON string and generate an an array having the requested element type. 
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ValueState">
+            <summary>
+            The initial state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ObjectState">
+            <summary>
+            Object state. Set the parser to this state after encountering an 
+            open curly bracket in the initial / "Value" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ObjectState_QuoteCase">
+            <summary>
+            Quote encountered in "Object" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ObjectState_ColonCase">
+            <summary>
+            Colon encountered in "Object" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ObjectState_CommaCase">
+            <summary>
+            Comma encountered in "Object" State.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ObjectState_ClosingCurlyBracketCase">
+            <summary>
+            Closing curly bracket encountered in "Object" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ObjectState_DefaultCase(System.Char)">
+            <summary>
+            Default case in "Object" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ArrayState">
+            <summary>
+            Array state. Set the parser to this state after encountering an open 
+            square bracket in the "Value" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ArrayState_CommaCase">
+            <summary>
+            Comma encountered in "Array" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ArrayState_ClosingSquareBracketCase">
+            <summary>
+            Closing square bracket encountered in "Array" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ArrayState_DefaultCase(System.Char)">
+            <summary>
+            Default case in "Array" state
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.NumberState">
+            <summary>
+            Number state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.StringState">
+            <summary>
+            String state. Set the parser to this state after encountering a quotation 
+            mark in the "Value" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.EscapedStringState">
+            <summary>
+            Escaped string state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.CodePointState">
+            <summary>
+            Code point state. Parses escaped unicode code points while in "String" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.BooleanState">
+            <summary>
+            Boolean state. Set the parser to this state after encountering a 't' or an 'f'
+            in the "Value" state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.NullState">
+            <summary>
+            Null state. Set the parser to this state after encountering an 'n'
+            in the initial ("Value") state.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.Set``1(``0@,System.Object,System.Type)">
+            <summary>
+            Recursively tries to set the value or the property values of an object with an arbitrary type 
+            using a value of an unknown type. Any exceptions thrown in the process are NOT caught.
+            </summary>
+            <param name="value">The value to apply to the given object reference.</param>
+            <param name="obj">The target object to populate with the content of "value".</param>
+            <param name="t">If the type of "obj" is known beforehand it can be passed 
+            to the method using this parameter.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.SetArray``1(System.Collections.Generic.List{``0}@,System.Object[])">
+            <summary>
+            Recursively tries to set the content of a List with an arbitrary element type 
+            using a array of objects of an unknown type. Any exceptions thrown in the process are NOT caught.
+            </summary>
+            <param name="list">The list to populate</param>
+            <param name="array">The raw array parsed from a JSON string.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.SetPropVal``1(System.Reflection.PropertyInfo,System.Object,``0)">
+            <summary>
+            Sets a property to a given value.
+            </summary>
+            <param name="pi">The property to set.</param>
+            <param name="value">The value.</param>
+            <param name="obj">The object which has the property.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.PreparePropVal(System.Type,System.Object)">
+            <summary>
+            Prepares a property value for assignment to a property. This includes converting it to the correct type.
+            </summary>
+            <param name="type">The type of the property.</param>
+            <param name="value">The value.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ConvertToArray``1(System.Object[])">
+            <summary>
+            Converts an array of objects to an array of a desired type. Use this with reflection if you only have
+            a Type instance to work with.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ReflectionConvertToArray(System.Object[],System.Type)">
+            <summary>
+            ...
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.JsonParser.ConvertFromUnixTimestamp(System.Int64)">
+            <summary>
+            Converts a unix timestamp to a DateTime
+            </summary>		
+        </member>
+        <member name="T:TXTextControl.Web.Json.NumberParser">
+            <summary>
+            JSON number format parser.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.NumberParser.ParseNumberString">
+            <summary>
+            Parses the number string gathered so far and stores the result in m_result.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.NumberParser.Done">
+            <summary>
+            Parses the number string gathered so far and sets the parser state to "done".
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Json.Parser`1">
+            <summary>
+            Base class for the parsers needed for JSON deserialization.
+            </summary>
+            <typeparam name="T">The type of the return value of the Parse method.</typeparam>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.#ctor(System.String,System.Int32)">
+            <summary>
+            Creates a parser which parses a given input string at a given index and 
+            creates an object of type <typeparamref name="T"/>.
+            </summary>
+            <param name="input">The input string.</param>
+            <param name="start">The 0-based character position to start parsing the input string at.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.Parse">
+            <summary>
+            Parses the input string.
+            </summary>
+            <returns>An object of type <typeparamref name="T"/>.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.Peek">
+            <summary>
+            Returns the next character in the input string without consuming it.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.Peek(System.Int32)">
+            <summary>
+            Returns a given number of characters which follow after the current 
+            position in the input string without consuming them.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.Consume(System.Int32)">
+            <summary>
+            Consumes and returns a given number of characters following the current
+            position in the input string.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.Consume">
+            <summary>
+            Consumes and returns the next character in the input string.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.Unconsume">
+            <summary>
+            "Un-consumes" one character.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Parser`1.White">
+            <summary>
+            Eats up all whitespace characters at the current position up to the 
+            next non whitespace character.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.Json.Parser`1.HasMoreTokens">
+            <summary>
+            Checks if there are any characters left to consume.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Json.ParserException">
+            <summary>
+            Base class of all JSON parser related exceptions.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.ParserException.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of the ParserException class.
+            </summary>
+            <param name="message">The message.</param>
+            <param name="pos">The position in the input string where the error occurred.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.UnexpectedEndOfInputException">
+            <summary>
+            Thrown when the parser encounters an unexpected end of input.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.UnexpectedEndOfInputException.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the UnexpectedEndOfInputException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.UnexpectedTokenException">
+            <summary>
+            Thrown when the parser encounters an unexpected token.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.UnexpectedTokenException.#ctor(System.Int32,System.Char)">
+            <summary>
+            Initializes a new instance of the UnexpectedTokenException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+            <param name="token">The unexpected token.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.InvalidCodePointException">
+            <summary>
+            Thrown when the parser encounters an invalid unicode code point.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.InvalidCodePointException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the InvalidCodePointException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+            <param name="codePoint">The invalid unicode code point.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.UnknownLiteralNameTokenException">
+            <summary>
+            Thrown when the parser encounters an unknown literal name token.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.UnknownLiteralNameTokenException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the UnknownLiteralNameTokenException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+            <param name="literalNameToken">The unknown literal name token.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.InvalidNumberFormatException">
+            <summary>
+            Thrown when the parser encounters an invalid number format.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.InvalidNumberFormatException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the InvalidNumberFormatException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+            <param name="number">The invalid number.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.ExistingPropertyException">
+            <summary>
+            Thrown when a property already exists.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.ExistingPropertyException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the ExistingPropertyException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+            <param name="propertyName">The name of the property.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.UnknownParseErrorException">
+            <summary>
+            Thrown in case of any other parse error.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.UnknownParseErrorException.#ctor(System.Int32,System.String)">
+            <summary>
+            Initializes a new instance of the UnknownParseErrorException class.
+            </summary>
+            <param name="pos">The position in the input string where the error occurred.</param>
+            <param name="message">The error message.</param>
+        </member>
+        <member name="T:TXTextControl.Web.Json.Serializer">
+            <summary>
+            Serializes objects to JSON notation recursively.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.#ctor(System.Object)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="obj">The object to serialize.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.Serialize">
+            <summary>
+            Recursively serializes the given object to JSON notation.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.Serialize(System.Object,System.Text.StringBuilder)">
+            <summary>
+            Recursively serializes the given object to JSON notation.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.SerializeComplexType(System.Object,System.Text.StringBuilder)">
+            <summary>
+            Serializes an object by recursively serializing the value of each public property.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.SerializeSimpleType(System.Object,System.Text.StringBuilder)">
+            <summary>
+            Serializes built-in .NET data types.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.SerializeEnumerableType(System.Collections.IEnumerable,System.Text.StringBuilder)">
+            <summary>
+            Serializes everything implementing the IEnumerable interface to a JSON array.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Json.Serializer.SerializeStringKeyDictionary(System.Collections.IDictionary,System.Text.StringBuilder)">
+            <summary>
+            Recursively serializes an object of type Dictionary&lt;string, T&gt; using the keys as
+            property names.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Json.SerializerException">
+            <summary>
+            Base class of all JSON serializer related exceptions.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.WebSocketHandler">
+            <summary>
+            This class handles WebSocket connections from the browser and forwards commands to the TX Text Control
+            </summary>
+            <summary>
+            Provides access to the public interface of the WebSocketHandler class.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.WebSocketHandler.m_browserCommands">
+            <summary>
+            Commands coming from the browser
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.WebSocketHandler.m_serverCommands">
+            <summary>
+            Commands coming from the server.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.WebSocketHandler.s_instances">
+            <summary>
+            WebSocketHandler instances having a connection ID
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.WebSocketHandler.DefaultServicePort">
+            <summary>
+            Server port for TX 33.0: 4282. Increment this with every new TX version.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.#ctor(System.Net.IPAddress,System.Int32)">
+            <summary>
+            Constructor for instances with a local service address and port. The values passed to this constructor
+            override the static properties WebSocketHandler.ServiceAddress and WebSocketHandler.ServicePort.
+            </summary>
+            <param name="serviceAddress">The service address</param>
+            <param name="servicePort">The service port</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if servicePort is not in the range of valid port numbers</exception>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.#ctor(System.String,System.Int32)">
+            <summary>
+            Constructor for instances with a local service address and port. The values passed to this constructor
+            override the static properties WebSocketHandler.ServiceAddress and WebSocketHandler.ServicePort.
+            </summary>
+            <param name="hostNameOrAddress">The service address</param>
+            <param name="servicePort">The service port</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown if servicePort is not in the range of valid port numbers</exception>
+            <exception cref="T:System.Exception">Thrown if hostNameOrAddress is not a valid host name or address</exception>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.IsReusable">
+            <summary>
+            Returns false so every http request creates a new WebSocketHandler instance.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.AreTXComponentsLoaded">
+            <summary>
+            Returns whether TX components have completely been loaded in the service's worker process.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.ServicePort">
+            <summary>
+            Gets or sets the port at which to connect to the TX service.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.ServiceAddress">
+            <summary>
+            Gets or sets the ip address at which to connect to the TX service.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.ServerResources">
+            <summary>
+            Internal property returning resoruces fetched from service.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            Processes the request.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.DoTalkingAsync(System.Net.WebSockets.WebSocket)">
+            <summary>
+            The main method of the WebSocketHandler class. It is called when a new WebSocket connection is established.
+            </summary>
+            <param name="socket"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.CloseWebSocketConnectionAsync">
+            <summary>
+            Closes the WebSocket connection.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.CollectBrowserCommands(System.Threading.AutoResetEvent)">
+            <summary>
+            Receives command strings from the browser and adds them to the command queue.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ProcessBrowserCommands(System.Threading.AutoResetEvent)">
+            <summary>
+            Takes commands which were added by CollectBrowserCommands(), processes
+            them, and removes them from the queue.
+            </summary>
+            <param name="waitHandle"></param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ProcessBrowserCommand(TXTextControl.Web.Server.DataContainer)">
+            <summary>
+            Processes a command received from the browser.
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ForwardToService(TXTextControl.Web.Server.DataContainer)">
+            <summary>
+            Forwards a command to the TCP server (the service).
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.CollectServerCommands(System.Threading.AutoResetEvent)">
+            <summary>
+            Collects server commands.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ProcessServerCommands(System.Threading.AutoResetEvent)">
+            <summary>
+            Processes the server command queue.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ProcessServerCommand(TXTextControl.Web.Server.DataContainer)">
+            <summary>
+            Processes a command received from the service.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SendConsoleLogMessage(System.String,TXTextControl.Web.Server.ConsoleLogType)">
+            <summary>
+            Enqueues a console log message to be sent to the browser.
+            </summary>
+            <param name="message">The message to be sent.</param>
+            <param name="logType">The type of the message.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SendPongMessage">
+            <summary>
+            Sends a "pong" message as a response to a "ping" message from the browser.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.TmrBrowserConnectionTimeout_Elapsed(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            Timer event handler constantly checking if the browser connection still exists. Sends "ClientConnectionLost"
+            command to the TCP server and closes the websocket in case of a connection loss.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SetConnectionID(TXTextControl.Web.Server.DataContainer)">
+            <summary>
+            Sets the connection ID received from the web page.
+            </summary>
+            <param name="command"></param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ProcessGetFileDirCommand(System.String,TXTextControl.Web.FileType)">
+            <summary>
+            Processes a GetFileDirectory command.
+            </summary>
+            <param name="dir">The directory to be sent to the browser.</param>
+            <param name="fileType">The type of the file.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ShowClientMessageBox(System.String,System.String)">
+            <summary>
+            Shows a message box in the browser.
+            </summary>
+            <param name="caption"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.StoreControlResources(System.Byte[])">
+            <summary>
+            Stores resources from server in static member.
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SignalAllWaitHandles">
+            <summary>
+            Signals all waiting save and load and send command method wait handles.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.EditMode">
+            <summary>
+            Gets or sets the edit mode of the Text Control. The edit mode determines whether the document can be
+            edited or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.BackColor">
+            <summary>
+            Gets or sets the background color of the Text Control.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.StatusBarColor">
+            <summary>
+            Gets or sets the color of the status bar of the Text Control.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.SaveDocumentQuestionDialogEnabled">
+            <summary>
+            Gets or sets a value indicating whether the save document question dialog is enabled or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.ContextMenusEnabled">
+            <summary>
+            Gets or sets a value indicating whether the context menus are enabled or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.DocumentTargetMarkers">
+            <summary>
+            Gets or sets a value indicating whether the control characters are displayed or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.TableGridLines">
+            <summary>
+            Gets or sets a value indicating whether the table grid lines are displayed or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.TextFrameMarkerLines">
+            <summary>
+            Gets or sets a value indicating whether the text frame marker lines are displayed or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.ControlChars">
+            <summary>
+            Gets or sets a value indicating whether the control characters are displayed or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.TextFieldsEditable">
+            <summary>
+            Gets or sets a value indicating whether the text fields are editable or not.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.Selection">
+            <summary>
+            Gets or sets the current selection of the Text Control.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.TextParts">
+            <summary>
+            Gets the collection of text parts of the Text Control.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.FormattingPrinter">
+            <summary>
+            Gets or sets the name of the formatting printer.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.UserNames">
+            <summary>
+            Gets or sets the user names of the Text Control.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.GetFileDirectory(TXTextControl.Web.FileType)">
+            <summary>
+            Gets the file directory for the specified file type.
+            </summary>
+            <param name="fileType">The file type.</param>
+            <returns>The file directory.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SetFileDirectory(System.String,TXTextControl.Web.FileType)">
+            <summary>
+            Sets the file directory for the specified file type.
+            </summary>
+            <param name="directory">The file directory.</param>
+            <param name="fileType">The file type.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadText(System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Loads the specified document from a given file path.
+            </summary>
+            <param name="path">The file path.</param>
+            <param name="streamType">The stream type.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadText(System.String,TXTextControl.Web.StringStreamType,System.Text.Encoding)">
+            <summary>
+            Loads the specified document from a given file path with a given encoding.
+            </summary>
+            <param name="path">The file path.</param>
+            <param name="streamType">The stream type.</param>
+            <param name="encoding">The encoding.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadText(System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Loads the specified document from a file stream
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <param name="streamType">The stream type.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadText(System.IO.FileStream,TXTextControl.Web.StringStreamType,System.Text.Encoding)">
+            <summary>
+            Loads the specified document from a file stream with a given encoding.
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <param name="streamType">The stream type.</param>
+            <param name="encoding">The encoding.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadText(System.Byte[],TXTextControl.Web.BinaryStreamType)">
+            <summary>
+            Loads a document from a byte array.
+            </summary>
+            <param name="data">The byte array.</param>
+            <param name="streamType">The stream type.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadText(System.String,TXTextControl.Web.StringStreamType)">
+            <summary>
+            Loads a document from a string.
+            </summary>
+            <param name="stringData">The string containing the document data.</param>
+            <param name="streamType">The stream type.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadDatabase(System.String)">
+            <summary>
+            Loads a database from a given file path.
+            </summary>
+            <param name="path">The file path.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadDatabase(System.Xml.XmlDocument)">
+            <summary>
+            Loads a database from a given xml document.
+            </summary>
+            <param name="xmlDoc">The xml document.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadDatabase(System.Data.DataSet)">
+            <summary>
+            Lodas a database from a DataSet instance.
+            </summary>
+            <param name="dataSet">The DataSet instance.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadDatabase(System.IO.FileStream)">
+            <summary>
+            Loads a database from a file stream containing xml data.
+            </summary>
+            <param name="fileStream">The file stream.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadDataFromModel(System.Collections.IEnumerable)">
+            <summary>
+            Loads something that implements IEnumerable as a database.
+            </summary>
+            <param name="model">The model.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadDataFromModel(System.Collections.IEnumerable,System.IFormatProvider)">
+            <summary>
+            Loads something that implements IEnumerable as a database using a given number and date time format.
+            </summary>
+            <param name="model">The model.</param>
+            <param name="numberAndDateTimeFormat">The number and date time format.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadJsonData(System.String)">
+            <summary>
+            Loads JSON data as a database.
+            </summary>
+            <param name="json">The JSON data.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SaveText(System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Saves the document to a given file path.
+            </summary>
+            <param name="path">The file path.</param>
+            <param name="streamType">The stream type to use.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SaveText(System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Saves the document to a given file stream.
+            </summary>
+            <param name="fileStream">The file stream.</param>
+            <param name="streamType">The stream type to use.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SaveText(System.Byte[]@,TXTextControl.Web.BinaryStreamType)">
+            <summary>
+            Saves the document into a byte array.
+            </summary>
+            <param name="data">The byte array the document is saved into.</param>
+            <param name="streamType">The stream type to use.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SaveText(System.String@,TXTextControl.Web.StringStreamType)">
+            <summary>
+            Saves the document into a string.
+            </summary>
+            <param name="stringData">The string the document is saved into.</param>
+            <param name="streamType">The stream type to use.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ResetContents">
+            <summary>
+            Resets the contents of the document editor.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.GetInstance(System.String)">
+            <summary>
+            Returns a WebSocketHandler instance handling a web browser connection identified by a given connection ID
+            and established by a document editor instance.
+            </summary>
+            <param name="connectionID">The connection ID identifying the web browser connection.</param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SaveDocumentDataToPath(System.Byte[],System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Saves the document data to a given file path.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SaveDocumentDataToFileStream(System.Byte[],System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Saves the document data to a given file stream.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SendSaveCommandAndWait(TXTextControl.Web.StreamType)">
+            <summary>
+            Sends a save document command to the server and waits for the server response utilizing a wait handle.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.GetSaveCommandResponseContent(System.String@,System.Byte[])">
+            <summary>
+            Extracts the contents of the data sent by the server as an answer to the command 
+            ServerCommand.SaveDocumentFile. The contained object looks as follows:
+            <code>
+            {
+               excMsg: "...", // Exception message. Is an empty string if all went well.
+               data: &lt;base64 document data&gt;
+            }
+            </code>
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SendLoadCommandAndWait(TXTextControl.Web.StringStreamType,System.String)">
+            <summary>
+            Sends a load document command to the server and waits for the server response utilizing a wait handle.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.SendLoadCommandAndWait(TXTextControl.Web.StreamType,System.Byte[])">
+            <summary>
+            Sends a load document command to the server and waits for the server response utilizing a wait handle.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.GetEmptyCommandResponseContent(System.Byte[],System.String)">
+            <summary>
+            Returns the exception message from an otherwise empty command response.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadXmlDatabaseUtf8(System.Byte[])">
+            <summary>
+            Loads an xml database from a byte array using the SendOpenFileCommand method.
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.LoadJsonDataUtf8(System.Byte[])">
+            <summary>
+            Loads a JSON database from a byte array using the SendOpenFileCommand method.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.WriteTextFormatToPath(System.Byte[],System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Writes string data according to a given string stream type. RTF data is encoded
+            with the system's default ANSI codepage, all other formats are saved as UTF-8.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.WriteTextFormatToStream(System.Byte[],System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Writes string data according to a given string stream type. RTF data is encoded
+            with the system's default ANSI codepage, all other formats are saved as UTF-8.
+            </summary>
+            <param name="data"></param>
+            <param name="fileStream"></param>
+            <param name="streamType"></param>
+        </member>
+        <member name="T:TXTextControl.Web.WebSocketHandler.GetResourceCommand">
+            <summary>                
+            GetResource command content.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.WebSocketHandler.GetResourceResponse">
+            <summary>
+            GetResource command response.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.GetResourceResponse.resourceName">
+            <summary>
+            The resource name.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.WebSocketHandler.GetResourceResponse.data">
+            <summary>
+            The resource text in case of string resources or the base64 encoded
+            resource data in case of binary resources.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.WebSocketHandler.ProcessGetResourceCommand(TXTextControl.Web.WebSocketHandler.GetResourceCommand)">
+            <summary>
+            Processes a GetResource command. Every GetResource command triggers an answer, whether the resource exists or not.
+            Assuming only string resources for now. TODO: Differentiate between binary and string resources.
+            </summary>
+            <param name="cmdRes"></param>
+        </member>
+        <member name="T:TXTextControl.Web.Extensions">
+            <summary>
+            Extension methods for the WebSocket class.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Extensions.ReceiveStringAsync(System.Net.WebSockets.WebSocket)">
+            <summary>
+            Receives a string from the browser.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.DockStyle">
+            <summary>
+            Dock style.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.DockStyle.None">
+            <summary>
+            The control is not docked.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.DockStyle.Fill">
+            <summary>
+            All the control's edges are docked to the all edges of its containing control and sized appropriately.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.DockStyle.Window">
+            <summary>
+            The control fills the browser window.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.ComponentRenderMode">
+            <summary>
+            Component render mode.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.ComponentRenderMode.Bitmap">
+            <summary>
+            Bitmap based render mode (PNG).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.ComponentRenderMode.Vector">
+            <summary>
+            Vector based render mode (SVG).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.ComponentRenderMode.Auto">
+            <summary>
+            Automatic render mode selection depending on current connection quality and browser DPI. 
+            Below a certain resolution threshold, the bitmap based render mode is always used because
+            text rendering is too blurry otherwise.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.HeaderFooter">
+            <summary>
+            Represents a header or footer in a document.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.HeaderFooter.#ctor(System.Int32,System.Int32,TXTextControl.Web.HeaderFooterType,TXTextControl.Web.WebSocketHandler)">
+            <summary>
+            Creates a new instance of the HeaderFooter class.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.HeaderFooter.Section">
+            <summary>
+            Gets the section number of the header or footer.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.HeaderFooter.Type">
+            <summary>
+            Gets the type of the header or footer.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.IFormattedText">
+            <summary>
+            Contains properties and methods for a formatted text part.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.IFormattedText.Selection">
+            <summary>
+            Gets or sets the current selection.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.MainText">
+            <summary>
+            Represents the main text part of a Text Control document.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MainText.#ctor(System.Int32,TXTextControl.Web.WebSocketHandler)">
+            <summary>
+            Creates a new instance of the MainText class.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.MyExtensions">
+            <summary>
+            Some extension methods for various classes.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.MyExtensions.Remove``2(System.Collections.Concurrent.ConcurrentDictionary{``0,``1},``0)">
+            <summary>
+            Removes the value with the specified key from the ConcurrentDictionary if the key exists.
+            </summary>
+            <typeparam name="TKey">The type of the keys in the dictionary.</typeparam>
+            <typeparam name="TValue">The type of the values in the dictionary.</typeparam>
+            <param name="dict">The dictionary.</param>
+            <param name="key">The key of the value to remove.</param>
+        </member>
+        <member name="F:TXTextControl.Web.MyExtensions.s_rnd">
+            <summary>
+            Generates an unused random key for a ConcurrentDictionary having int as the key type.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.FileDirectories">
+            <summary>
+            Default values for certain file directories.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileDirectories.InitialUserFilePath">
+            <summary>
+            The initial user file path.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.FileDirectories.DefaultRootDirectories">
+            <summary>
+            Default root diercotries for different file types.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileDirectories.DefaultRootDirectories.Document">
+            <summary>
+            The default root directory for documents.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileDirectories.DefaultRootDirectories.DataBase">
+            <summary>
+            The default root directory for database files.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileDirectories.DefaultRootDirectories.Image">
+            <summary>
+            The default root directory for images.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.FileDirectories.#ctor">
+            <summary>
+            Sets the public properties to their default values.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.FileDirectories.Document">
+            <summary>
+            Gets or sets the root directory for documents.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.FileDirectories.Image">
+            <summary>
+            Gets or sets the root directory for images.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.FileDirectories.DataBase">
+            <summary>
+            Gets or sets the root directory for database files.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Selection">
+            <summary>
+            Represents a selection in a Text Control document.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.Selection.Start">
+            <summary>
+            Returns the start position of the selection.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.Selection.Length">
+            <summary>
+            Returns the length of the selection.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.#ctor">
+            <summary>
+            Creates a new instance of the Selection class with the start position 0 and the length 0.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Creates a new instance of the Selection class.
+            </summary>
+            <param name="start">The start position of the selection.</param>
+            <param name="length">The length of the selection.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.#ctor(TXTextControl.Web.WebSocketHandler)">
+            <summary>
+            Creates a new instance of the Selection class.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.#ctor(TXTextControl.Web.WebSocketHandler,TXTextControl.Web.TextPart)">
+            <summary>
+            Creates a new instance of the Selection class.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Creates a new instance of the Selection class.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Load(System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified file path.
+            </summary>
+            <param name="path">Specifies a file from which the data is loaded.</param>
+            <param name="streamType">Specifies one of the StreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Load(System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified file stream.
+            </summary>
+            <param name="fileStream">Specifies a file from which the data is loaded. The data is loaded from the stream's current position.</param>
+            <param name="streamType">Specifies one of the StreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Load(System.Byte[],TXTextControl.Web.BinaryStreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified byte array.
+            </summary>
+            <param name="binaryData">Specifies a byte array from which the data is loaded.</param>
+            <param name="binaryStreamType">Specifies one of the BinaryStreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Load(System.String,TXTextControl.Web.StringStreamType)">
+            <summary>
+            Loads text formatted with the specified format. The new text is read from the specified string.
+            </summary>
+            <param name="stringData">Specifies a string from which the data is loaded.</param>
+            <param name="stringStreamType">Specifies one of the StringStreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Save(System.String,TXTextControl.Web.StreamType)">
+            <summary>
+            Saves the selection to the specified file path.
+            </summary>
+            <param name="path">Specifies a file to which the data is saved.</param>
+            <param name="streamType">Specifies one of the StreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Save(System.IO.FileStream,TXTextControl.Web.StreamType)">
+            <summary>
+            Saves the selection to the specified file stream.
+            </summary>
+            <param name="fileStream">Specifies a file to which the data is saved. The data is saved to the stream's current position.</param>
+            <param name="streamType">Specifies one of the StreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Save(System.Byte[]@,TXTextControl.Web.BinaryStreamType)">
+            <summary>
+            Saves the selection to the specified byte array.
+            </summary>
+            <param name="data">Specifies a byte array to which the data is saved.</param>
+            <param name="streamType">Specifies one of the BinaryStreamType values.</param>
+        </member>
+        <member name="M:TXTextControl.Web.Selection.Save(System.String@,TXTextControl.Web.StringStreamType)">
+            <summary>
+            Saves the selection to the specified string.
+            </summary>
+            <param name="stringData">Specifies a string to which the data is saved.</param>
+            <param name="streamType">Specifies one of the StringStreamType values.</param>
+        </member>
+        <member name="T:TXTextControl.Web.TextFrame">
+            <summary>
+            Represents a text frame in a Text Control document.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextFrame.#ctor(System.Int32,TXTextControl.Web.WebSocketHandler)">
+            <summary>
+            Creates a new instance of the TextFrame class.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.HeaderFooterType">
+            <summary>
+            Determines the type of a TX header or footer.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.HeaderFooterType.Header">
+            <summary>
+            The object is a header.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.HeaderFooterType.FirstPageHeader">
+            <summary>
+            The object is a first page header.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.HeaderFooterType.Footer">
+            <summary>
+            The object is a footer.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.HeaderFooterType.FirstPageFooter">
+            <summary>
+            The object is a first page footer.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.HeaderFooterType.EvenHeader">
+            <summary>
+            The object is an even page header.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.HeaderFooterType.EvenFooter">
+            <summary>
+            The object is an even page footer.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.TextPart">
+            <summary>
+            Represents a formatted text part in a Text Control document.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPart.#ctor(TXTextControl.Web.Server.TextPartType,System.Int32,TXTextControl.Web.WebSocketHandler)">
+            <summary>
+            Creates a new instance of the TextPart class.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPart.#ctor">
+            <summary>
+            Creates a new instance of the TextPart class.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.TextPart.Selection">
+            <summary>
+            The current selection.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.TextPartCollection">
+            <summary>
+            Represents a collection of text parts.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.#ctor(TXTextControl.Web.WebSocketHandler)">
+            <summary>
+            Initializes a new instance of the TextPartCollection class.
+            </summary>
+            <param name="wsHandler">The WebSocketHandler object.</param>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.CopyTo(TXTextControl.Web.IFormattedText[],System.Int32)">
+            <summary>
+            Copies the elements of the collection to an array, starting at a particular array index.
+            </summary>
+            <param name="array">The array to copy the elements to.</param>
+            <param name="arrayIndex">The zero-based index in array at which copying begins.</param>
+        </member>
+        <member name="P:TXTextControl.Web.TextPartCollection.Count">
+            <summary>
+            Gets the number of text parts in the collection.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.TextPartCollection.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the collection is read-only.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.Activate(TXTextControl.Web.IFormattedText)">
+            <summary>
+            Activates the specified text part.
+            </summary>
+            <param name="textPart">The text part to activate.</param>
+            <returns>true if the text part could be activated; otherwise, false.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the collection.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.Add(TXTextControl.Web.IFormattedText)">
+            <summary>
+            Not supported.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.Clear">
+            <summary>
+            Not supported.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.Contains(TXTextControl.Web.IFormattedText)">
+            <summary>
+            Not supported.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartCollection.Remove(TXTextControl.Web.IFormattedText)">
+            <summary>
+            Not supported.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.TextPartEnumerator">
+            <summary>
+            Enumerates the text parts in a TextPartCollection.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartEnumerator.#ctor(TXTextControl.Web.TextPartCollection)">
+            <summary>
+            Initializes a new instance of the TextPartEnumerator class from a TextPartCollection.
+            </summary>
+            <param name="textPartCollection">The TextPartCollection to enumerate.</param>
+        </member>
+        <member name="P:TXTextControl.Web.TextPartEnumerator.Current">
+            <summary>
+            The element in the collection at the current position of the enumerator.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.Web.TextPartEnumerator.System#Collections#IEnumerator#Current">
+            <summary>
+            The element in the collection at the current position of the enumerator.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartEnumerator.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.
+            </summary>
+            <returns>true if the enumerator was successfully advanced to the next element;
+            false if the enumerator has passed the end of the collection.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartEnumerator.Reset">
+            <summary>
+            Sets the enumerator to its initial position, which is before the first element in the collection.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.TextPartEnumerator.Dispose">
+            <summary>
+            Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.Server.StructExtensions">
+            <summary>
+            Contains extension methods for structures.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.Web.Server.StructExtensions.ToByteArray``1(``0)">
+            <summary>
+            Converts a structure to a byte array.
+            </summary>
+            <typeparam name="T">The type of the structure.</typeparam>
+            <param name="structure">The structure to convert.</param>
+            <returns>The byte array.</returns>
+        </member>
+        <member name="M:TXTextControl.Web.Server.StructExtensions.ToStructure``1(System.Byte[])">
+            <summary>
+            Converts a byte array to a structure.
+            </summary>
+            <typeparam name="T">The type of the structure.</typeparam>
+            <param name="bytes">The byte array to convert.</param>
+            <returns>The structure.</returns>
+        </member>
+        <member name="T:TXTextControl.Web.StreamType">
+            <summary>
+            Specifies a document format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.PlainAnsiText">
+            <summary>
+            Specifies text in Windows ANSI format (an end of a paragraph is marked with the control characters 13 and 10).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.InternalFormat">
+            <summary>
+            Specifies the Text Control format. Text is stored in ANSI format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.HTMLFormat">
+            <summary>
+            Specifies HTML format (Hypertext Markup Language).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.RichTextFormat">
+            <summary>
+            Specifies RTF format (Rich Text Format).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.PlainText">
+            <summary>
+            Specifies text in Windows Unicode format (an end of a paragraph is marked with the control characters 13 and 10).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.InternalUnicodeFormat">
+            <summary>
+            Specifies the Text Control format. Text is stored in Unicode format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.MSWord">
+            <summary>
+            Specifies Microsoft Word format (.DOC version).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.XMLFormat">
+            <summary>
+            Specifies XML format (Extensible Markup Language).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.CascadingStylesheet">
+            <summary>
+            Specifies CSS format (Cascading Style Sheet). This format can only be used in saving operations.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.AdobePDF">
+            <summary>
+            Specifies Adobe Portable Document Format (PDF). How a PDF document is loaded depends on the LoadSettings.PDFImportSettings property. Only a complete document can be saved with this format. 
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.WordprocessingML">
+            <summary>
+            Specifies Microsoft Word format (.DOCX version).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.AdobePDFA">
+            <summary>
+            Specifies Adobe Portable Document Format Archive (PDF/A). This format can only be used in saving operations and only a complete document can be saved with this format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.SpreadsheetML">
+            <summary>
+            Specifies Microsoft Excel format (Office Open XML version).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StreamType.All">
+            <summary>
+            Specifies all formats.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.StringStreamType">
+            <summary>
+            Specifies string based document formats.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StringStreamType.HTMLFormat">
+            <summary>
+            Specifies HTML format (Hypertext Markup Language).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StringStreamType.RichTextFormat">
+            <summary>
+            Specifies RTF format (Rich Text Format).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StringStreamType.PlainText">
+            <summary>
+            Specifies text in Windows Unicode format (an end of a paragraph is marked with the control characters 13 and 10).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StringStreamType.XMLFormat">
+            <summary>
+            Specifies XML format (Extensible Markup Language).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.StringStreamType.CascadingStylesheet">
+            <summary>
+            Specifies CSS format (Cascading Style Sheet). This format can only be used in saving operations.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.BinaryStreamType">
+            <summary>
+            Specifies binary document formats.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.InternalFormat">
+            <summary>
+            Specifies the Text Control format. Text is stored in ANSI format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.InternalUnicodeFormat">
+            <summary>
+            Specifies the Text Control format. Text is stored in Unicode format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.MSWord">
+            <summary>
+            Specifies Microsoft Word format (.DOC version).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.AdobePDF">
+            <summary>
+            Specifies Adobe Portable Document Format (PDF). How a PDF document is loaded depends on the LoadSettings.PDFImportSettings property. Only a complete document can be saved with this format. 
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.WordprocessingML">
+            <summary>
+            Specifies Microsoft Word format (.DOCX version).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.AdobePDFA">
+            <summary>
+            Specifies Adobe Portable Document Format Archive (PDF/A). This format can only be used in saving operations and only a complete document can be saved with this format.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.BinaryStreamType.SpreadsheetML">
+            <summary>
+            Specifies Microsoft Excel format (Office Open XML version).
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.FileType">
+            <summary>
+            Possible file types the browser can request.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileType.Document">
+            <summary>
+            Files in subfolder "documents"
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileType.Image">
+            <summary>
+            Files in subfolder "images"
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.FileType.DataBase">
+            <summary>
+            Files in subfolder "db"
+            </summary>
+        </member>
+        <member name="T:TXTextControl.Web.EditMode">
+            <summary>
+            Specifies the edit mode of a Text Control.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.EditMode.Edit">
+            <summary>
+            The document's text can be edited and formatted without restrictions.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.EditMode.ReadAndSelect">
+            <summary>
+            The document's text is displayed and text can be selected. Editing and formatting is restricted as specified through the DocumentPermissions property.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.EditMode.ReadOnly">
+            <summary>
+            The document's text is only displayed, text cannot be selected.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.Web.EditMode.UsePassword">
+            <summary>
+            A dialog box to enter a password is opened to protect the edit mode. This value can only be combined with EditMode.ReadAndSelect using the bitwise or operator.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter">
+            <summary>
+            Makes arbitrary enumerable types usable with the Mail Merge class.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_data">
+            <summary>
+            The object representing this data table
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_rows">
+            <summary>
+            List of data table row adapters
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_itemType">
+            <summary>
+            The item type.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_childTables">
+            <summary>
+            Child tables. Child tables are stored as dictionaries with the objects they represent as keys in a 
+            dictionary whose keys are the table names. Child table rows are generated in a lazy fashion and this 
+            member contains already generated ones so they only have to be generated once.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_tableName">
+            <summary>
+            The table name (lower case).
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_columnNames">
+            <summary>
+            Lower case column names.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.m_childTableNames">
+            <summary>
+            Lower case child table names.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.#ctor(System.Object)">
+            <summary>
+            Creates a new data table adapter either from an arbitrary object or 
+            from an instance of an enumerable type.
+            </summary>
+            <param name="data">The enumerable object.</param>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.#ctor(System.Object,System.String)">
+            <summary>
+            Creates a new data table adapter either from an arbitrary object 
+            from an instance of an enumerable type and sets the table name.
+            </summary>
+            <param name="data">The enumerable object.</param>
+            <param name="tableName">The table name.</param>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.TableName">
+            <summary>
+            The table name.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.ColumnNames">
+            <summary>
+            The column names.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.Rows">
+            <summary>
+            The rows.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.ChildTableNames">
+            <summary>
+            The child table names.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.ToXML">
+            <summary>
+            Converts the adapter's content to a DataSet object.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.ToXML(System.IFormatProvider)">
+            <summary>
+            Converts the adapter's content to a DataSet object.
+            </summary>
+            <param name="numberAndDateFormat">The number and date value format.</param>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.ToXMLElemList(System.Xml.XmlDocument,System.IFormatProvider)">
+            <summary>
+            Creates a list of xml elements each containing a representation of one 
+            row of this table.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.AnalyzeProperties">
+            <summary>
+            Analyzes properties and stores property names and property information. 
+            Uses DisplayNameAttributes as property names if present.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataAdapter.StorePropertyName(System.String,System.Reflection.PropertyInfo)">
+            <summary>
+            Stores a PropertyInfo and its name in the correct lists.
+            </summary>
+            <param name="propName">Property name</param>
+            <param name="pi">PropertyInfo</param>
+        </member>
+        <member name="T:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter">
+            <summary>
+            Exposes behaviour of a "data row" using arbitrary object types.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.m_objRow">
+            <summary>
+            The object representing this table row.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.m_dictRow">
+            <summary>
+            The dictionary representing this table row.
+            </summary>
+        </member>
+        <member name="F:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.m_table">
+            <summary>
+            The table the row belongs to.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.Item(System.String)">
+            <summary>
+            Returns the value of the property with the given name (case insensitive).
+            </summary>
+            <param name="key">Property name.</param>
+            <returns>value. Is never null.</returns>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.ToXMLElem(System.Xml.XmlDocument,System.IFormatProvider)">
+            <summary>
+            Recursively generates an XML element from this row and its child rows.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.GetChildTableAdapter(System.String,System.Object)">
+            <summary>
+            Creates a new child "table" or returns the stored one which has already been
+            created from the given object.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.GetDictValCaseInsensitive(System.Collections.IDictionary,System.String)">
+            <summary>
+            Returns the value of a dictionary entry at a key using the case 
+            insensitive key name.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.GetPublicGettableProperty(System.Object,System.String)">
+            <summary>
+            Returns the PropertyInfo object of a public non static property with a given name 
+            having a getter method. If a property has a DisplayNameAttribute, the given name
+            is compared to the display name, not the property name itself. Case insensitive.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.EnumerableDataRowAdapter.GetLowerCasePropertyNameIfUsable(System.Reflection.PropertyInfo)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TXTextControl.DocumentServer.DataSources.IDataRowAdapter">
+            <summary>
+            Classes acting as a "table row" used inside the MailMerge class have to implement
+            this interface.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.IDataRowAdapter.Item(System.String)">
+            <summary>
+            Returns the contents of the column with the given name.
+            </summary>
+            <param name="key">Column name.</param>
+            <returns>The value. Is never null.</returns>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.IDataRowAdapter.ContainsColumn(System.String)">
+            <summary>
+            Checks whether a data row has a column with a given name.
+            </summary>
+            <param name="columnName">The column name.</param>
+            <returns>The column with the given name exists.</returns>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.IDataRowAdapter.Table">
+            <summary>
+            Gets the table the row is part of.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.IDataRowAdapter.GetChildRows(System.String)">
+            <summary>
+            Returns the rows a given data relation contains.
+            </summary>
+            <param name="childTableName">Data relation name.</param>
+            <returns>The list of rows or null if a relation 
+            with the given name doesn't exist.</returns>
+        </member>
+        <member name="T:TXTextControl.DocumentServer.DataSources.IDataRowAdapterExtensions">
+            <summary>
+            Extension methods for interface IDataRowAdapter.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.IDataRowAdapterExtensions.GetFieldData(TXTextControl.DocumentServer.DataSources.IDataRowAdapter,System.String)">
+            <summary>
+            Gets the data of a column in a row. Descends into child relations automatically
+            if the field name contains dots (e. g. "Product.Name").
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.IDataRowAdapterExtensions.GetNestedChildColumnContent(TXTextControl.DocumentServer.DataSources.IDataRowAdapter,System.String[],System.String)">
+            <summary>
+            Returns the content of a nested child column given by a field name separated with '.'.
+            (e. g. &lt;&lt;products.suppliers.companyname&gt;&gt;)
+            </summary>
+            <param name="dataRow">Data row.</param>
+            <param name="childTableNames">Child table names in descending order.</param>
+            <param name="childColumnName">Child column name.</param>
+            <returns>Cell content. Is null for unknown child columns.</returns>
+        </member>
+        <member name="T:TXTextControl.DocumentServer.DataSources.StringExtensions">
+            <summary>
+            String class extensions
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.StringExtensions.ToChildColumnName(System.String)">
+            <summary>
+            If a string is composed of two or more strings separated by '.' this 
+            method returns the last one.
+            </summary>
+        </member>
+        <member name="M:TXTextControl.DocumentServer.DataSources.StringExtensions.ToChildTableNames(System.String)">
+            <summary>
+            If a string is composed of two or more strings separated by '.' this 
+            method returns all strings except the last one.
+            </summary>
+        </member>
+        <member name="T:TXTextControl.DocumentServer.DataSources.IDataTableAdapter">
+            <summary>
+            Classes acting as a "data table" used inside the MailMerge class have to implement
+            this interface.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.IDataTableAdapter.TableName">
+            <summary>
+            The name of the table.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.IDataTableAdapter.ColumnNames">
+            <summary>
+            The names of the columns in this table.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.IDataTableAdapter.Rows">
+            <summary>
+            The rows in this data table.
+            </summary>
+        </member>
+        <member name="P:TXTextControl.DocumentServer.DataSources.IDataTableAdapter.ChildTableNames">
+            <summary>
+            The names of the child relations in this table.
+            </summary>
+        </member>
+    </members>
+</doc>
